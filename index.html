@@ -11,17 +11,15 @@
 
 <body>
     <h1>Adivina el número</h1>
-    <form action="#" method="get">
+    <form action="#" method="get" class="container">
         <label for="selectedNumber">Introduce aquí tu número: </label>
-        <input type="text" id="selectedNumber" value="" name="selectedNumber" class="js-selectedNumber">
-        <input type="button" value="Prueba" class="js-try">
+        <input type="text" id="selectedNumber" value="" name="selectedNumber" class="input js-selectedNumber">
+        <input type="button" value="Prueba" class="button js-try">
     </form>
 
     <div>
-        <p class="js-clueText">Pista: Escribe el número y dale a prueba</p>
-    </div>
-    <div>
-        <p class="js-triesText">Número de intentos: 0</p>
+        <p class=" textArea js-clueText">Pista: Escribe el número y dale a prueba</p>
+        <p class=" textArea js-triesText">Número de intentos: 0</p>
     </div>
 
     <script src="./js/main.js"></script>

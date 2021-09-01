@@ -39,7 +39,7 @@ function guessTheNumber() {
 let number = 0;
 function counter() {
     number = number + 1;
-    triesText.innerHTML = `Voy por la vuelta ${number}`;
+    triesText.innerHTML = `Número de intentos: ${number}`;
 }
 
 //Handler function
