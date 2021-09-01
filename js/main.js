@@ -3,7 +3,7 @@
 const selectedNumber = document.querySelector('.js-selectedNumber');
 const tryItBtn = document.querySelector('.js-try');
 const clueText = document.querySelector('.js-clueText');
-const triesText = document.querySelector('js-triesText');
+const triesText = document.querySelector('.js-triesText');
 
 
 //Variable containing the generated random number
@@ -35,14 +35,19 @@ function guessTheNumber() {
     }
 }
 
+//Function - counter
+let number = 0;
+function counter() {
+    number = number + 1;
+    triesText.innerHTML = `Voy por la vuelta ${number}`;
+}
 
 //Handler function
 function handleTryIt() {
     guessTheNumber();
-
+    counter()
+        ;
 }
-
-
 
 //Listener
 tryItBtn.addEventListener('click', handleTryIt);
