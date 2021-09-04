@@ -1,9 +1,20 @@
 'use strict'
+
+//document.queryselector abbreviation
+function getEl(selector) {
+    return document.querySelector(selector);
+}
+
+//inner.HTML abbreviation
+function trackEl(string) {
+    return clueText.innerHTML = (string);
+}
+
 //Variables containing the HTML elements used
-const selectedNumber = document.querySelector('.js-selectedNumber');
-const tryItBtn = document.querySelector('.js-try');
-const clueText = document.querySelector('.js-clueText');
-const triesText = document.querySelector('.js-triesText');
+const selectedNumber = getEl('.js-selectedNumber');
+const tryItBtn = getEl('.js-try');
+const clueText = getEl('.js-clueText');
+const triesText = getEl('.js-triesText');
 
 
 //Variable containing the generated random number
@@ -19,19 +30,19 @@ function guessTheNumber() {
 
     let selectedNumberValue = parseInt(selectedNumber.value);
     if (selectedNumberValue === randomNumber) {
-        clueText.innerHTML = '¡Has ganado, campeona!'
+        trackEl('¡Has ganado, campeona!')
     }
     else if (selectedNumberValue < 0 || selectedNumberValue > 100) {
-        clueText.innerHTML = 'El número debe estar entre 1 y 100';
+        trackEl('El número debe estar entre 1 y 100');
     }
-    else if (selectedNumberValue < randomNumber && selectedNumberValue <= 100) {
-        clueText.innerHTML = 'Demasiado bajo.'
+    else if (selectedNumberValue < randomNumber) {
+        trackEl('Demasiado bajo.');
     }
-    else if (selectedNumberValue > randomNumber && selectedNumberValue <= 100) {
-        clueText.innerHTML = 'Demasiado alto.'
+    else if (selectedNumberValue > randomNumber) {
+        trackEl('Demasiado alto.');
     }
     else {
-        clueText.innerHTML = 'El valor introducido debe ser un número entre 0 y 100'
+        trackEl('El valor introducido debe ser un número entre 1 y 100');
     }
 }
 
