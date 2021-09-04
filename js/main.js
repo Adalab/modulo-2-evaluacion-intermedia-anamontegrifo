@@ -13,9 +13,10 @@ function trackEl(string) {
 //Variables containing the HTML elements used
 const selectedNumber = getEl('.js-selectedNumber');
 const tryItBtn = getEl('.js-try');
+const resetBtn = getEl('.js-reset');
 const clueText = getEl('.js-clueText');
 const triesText = getEl('.js-triesText');
-
+const form = getEl('.js-form');
 
 //Variable containing the generated random number
 function getRandomNumber(max) {
@@ -29,7 +30,10 @@ console.log(randomNumber);
 function guessTheNumber() {
 
     let selectedNumberValue = parseInt(selectedNumber.value);
-    if (selectedNumberValue === randomNumber) {
+    if (selectedNumber.value.length === 0) {
+        trackEl('No puedes dejar el campo vacío')
+    }
+    else if (selectedNumberValue === randomNumber) {
         trackEl('¡Has ganado, campeona!')
     }
     else if (selectedNumberValue < 0 || selectedNumberValue > 100) {
@@ -49,16 +53,21 @@ function guessTheNumber() {
 //Function - counter
 let number = 0;
 function counter() {
-    number = number + 1;
+    number += 1;
     triesText.innerHTML = `Número de intentos: ${number}`;
 }
 
-//Handler function
+//Handle function
 function handleTryIt() {
     guessTheNumber();
-    counter()
-        ;
+    counter();
+}
+
+function resetGame() {
+    location.reload();
 }
 
 //Listener
 tryItBtn.addEventListener('click', handleTryIt);
+resetBtn.addEventListener('click', resetGame);
+
