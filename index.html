@@ -2,31 +2,33 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/main.css">
-    <title>Módulo 2 - Evaluación intermedia</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles/main.css">
+	<title>Módulo 2 - Evaluación intermedia</title>
 </head>
 
 <body>
-    <h1>Adivina el número</h1>
-    <form action="#" method="get" class="container js-form">
-        <label for="selectedNumber">Introduce aquí tu número: </label>
-        <input type="text" id="selectedNumber" name="selectedNumber" class="input js-selectedNumber" required>
-        <div>
-            <input type="button" value="Prueba" class="button1 js-try">
-            <input type="button" value="Reset" class="button2 js-reset">
-        </div>
+	<header class="header">
+		<h1>Adivina el número</h1>
+	</header>
+	<main class="main">
+		<form action="#" method="get" class="container js-form">
+			<label for="selectedNumber">Introduce aquí tu número: </label>
+			<input type="text" id="selectedNumber" name="selectedNumber" class="input js-selectedNumber" required>
+			<div>
+				<input type="button" value="Prueba" class="button1 js-try">
+				<input type="button" value="Reset" class="button2 js-reset">
+			</div>
+		</form>
+		<div>
+			<p class="textClue js-clueText">Pista: Escribe el número y dale a prueba</p>
+			<p class="textTries js-triesText">Número de intentos: <span>0</span></p>
+		</div>
+	</main>
 
-    </form>
-
-    <div>
-        <p class="textArea js-clueText">Pista: Escribe el número y dale a prueba</p>
-        <p class="textArea js-triesText">Número de intentos: 0</p>
-    </div>
-
-    <script src="./js/main.js"></script>
+	<script src="./js/main.js"></script>
 </body>
 
 </html>

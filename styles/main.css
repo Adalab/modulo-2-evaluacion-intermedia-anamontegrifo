@@ -1,42 +1,62 @@
-* {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+body {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
+	margin: 0;
+	height: 100vh;
+	padding: 25px;
+	background-color: #f7f4f4;
+}
+.header {
+	font-size: 14px;
 }
 .container {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 .input {
-  width: 240px;
-  height: 30px;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  padding-left: 10px;
-  margin-top: 10px;
-  background-color: lightgray;
+	width: 150px;
+	height: 30px;
+	border-radius: 5px;
+	border: none;
+	padding: 0 10px;
+	margin: 10px 0;
+	background-color: #fd6f96;
 }
 
 .button1,
 .button2 {
-  width: 80px;
-  height: 30px;
-  margin-top: 10px;
-  border-radius: 5px;
+	width: 80px;
+	height: 30px;
+	margin-top: 10px;
+	border-radius: 5px;
 }
 
 .button1 {
-  border: 1px solid lightseagreen;
-  background-color: lightseagreen;
-  color: white;
+	border: none;
+	background-color: #6f69ac;
+	color: white;
 }
 .button2 {
-  border: 1px solid lightgray;
-  background-color: lightgray;
-  color: lightseagreen;
+	border: none;
+	background-color: lightgray;
+	color: #6f69ac;
+}
+.button1:active,
+.button2:active {
+	background-color: #fd6f96;
+	color: white;
+}
+.textClue {
+	font-size: 14px;
 }
 
-.textArea {
-  border: 3px solid lightgray;
-  width: 500px;
-  font-size: 20px;
+.textTries {
+	text-decoration: underline #6f69ac 2px;
+	max-width: 260px;
+	font-size: 14px;
+	padding: 5px;
+}
+span {
+	color: #fd6f96;
+	font-size: 22px;
 }
